@@ -1,0 +1,6 @@
+The output of command is in file "result"
+	 py -3.5 ..\grep-tree-contents_lab1.py -t 7d3b207 -s NOTE
+
+When I run this in windows, sometimes it would throw an encoding error like:
+	UnicodeEncodeError: 'charmap' codec can't encode character '\ufb01' in position 6: character maps to <undefined>
+I believe this happens due to the fact that windows console does not support unicode.
