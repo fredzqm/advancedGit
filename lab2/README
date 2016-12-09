@@ -1,0 +1,92 @@
+The output of command is in file "result"
+	 py -3.5 ..\alternate-history_lab2.py -t 4a218e805a4b -t cafd0d12 -t e6ab292b -o alternative-history-branch
+
+Here is the "git log" output in the alternative-history-branch:
+git log
+==>
+	commit 393b3fc60ceb2cc6b3f6f3f1a7c0afb2016ffecb
+	Author: Qinmao Zhang <zhangq2@rose-hulman.edu>
+	Date:   Fri Dec 9 16:40:11 2016 -0500
+
+	    alternative follow
+
+	commit 739f6babf8a00274706b067599639c19be9ee195
+	Author: Qinmao Zhang <zhangq2@rose-hulman.edu>
+	Date:   Fri Dec 9 16:40:11 2016 -0500
+
+	    alternative follow
+
+	commit af3a91f850e69193b87f67f32ed0b06e11d3c20e
+	Author: Qinmao Zhang <zhangq2@rose-hulman.edu>
+	Date:   Fri Dec 9 16:40:11 2016 -0500
+
+	    alternative start
+
+Here is the content of third (latest) commit:
+git cat-file -p 393b3fc60ceb2cc6b3f6f3f1a7c0afb2016ffecb
+==>
+	tree e6ab292b8cb583d454f0e215311d15dfceb7bf33
+	parent 739f6babf8a00274706b067599639c19be9ee195
+	author Qinmao Zhang <zhangq2@rose-hulman.edu> 1481319611 -0500
+	committer Qinmao Zhang <zhangq2@rose-hulman.edu> 1481319611 -0500
+
+	alternative follow
+
+Here is the content of the third tree:
+git cat-file -p e6ab292b8cb583d454f0e215311d15dfceb7bf33				
+==>
+	100644 blob 52080ffd61a0b6b48edf8c4a19f2d43669532138	LICENSE
+	100644 blob fd8a12c1e53c60ef952c7082908314e7c65c7ebf	README.md
+	040000 tree f402cac286b5eb6393d5106b9e79d0108dad7bf1	examples
+	040000 tree f79afe51ceacff595cf4f9aa24ab762ab6c1fe36	lib
+	100644 blob 6e2468cdc5292154f4f120986beb489060638b96	parsons.css
+	100644 blob 58f5629c5f862d0e4dc69270934ee66c077c4a02	parsons.js
+	040000 tree 5cbdcbbf7fedddfc18f9a451da5b2178d65c6281	tests
+	040000 tree d40370126d7d0f49510a621055fd616a6081d8c6	ui-extension
+
+
+Here is the content of the second commit:
+git cat-file -p 739f6babf8a00274706b067599639c19be9ee195
+==>
+	tree cafd0d121d20251e1a60df8e4f4d99edb3d1840e
+	parent af3a91f850e69193b87f67f32ed0b06e11d3c20e
+	author Qinmao Zhang <zhangq2@rose-hulman.edu> 1481319611 -0500
+	committer Qinmao Zhang <zhangq2@rose-hulman.edu> 1481319611 -0500
+
+	alternative follow
+
+
+Here is the content of the second tree:
+git cat-file -p cafd0d121d20251e1a60df8e4f4d99edb3d1840e				
+==>
+	100644 blob 52080ffd61a0b6b48edf8c4a19f2d43669532138	LICENSE
+	100644 blob fd8a12c1e53c60ef952c7082908314e7c65c7ebf	README.md
+	040000 tree f402cac286b5eb6393d5106b9e79d0108dad7bf1	examples
+	040000 tree f79afe51ceacff595cf4f9aa24ab762ab6c1fe36	lib
+	100644 blob 6e2468cdc5292154f4f120986beb489060638b96	parsons.css
+	100644 blob 5054ec585cf7575129a3febbce2cf27046a1bb1a	parsons.js
+	040000 tree 5cbdcbbf7fedddfc18f9a451da5b2178d65c6281	tests
+	040000 tree d40370126d7d0f49510a621055fd616a6081d8c6	ui-extension
+
+
+Here is the content of the first (start) commit:
+git cat-file -p af3a91f850e69193b87f67f32ed0b06e11d3c20e
+==>
+	tree 4a218e805a4bc6a18b288f14f3673d652cbd5530
+	author Qinmao Zhang <zhangq2@rose-hulman.edu> 1481319611 -0500
+	committer Qinmao Zhang <zhangq2@rose-hulman.edu> 1481319611 -0500
+
+	alternative start
+
+
+Here is the content of the first tree:
+git cat-file -p 				
+==>
+	100644 blob 52080ffd61a0b6b48edf8c4a19f2d43669532138	LICENSE
+	100644 blob fd8a12c1e53c60ef952c7082908314e7c65c7ebf	README.md
+	040000 tree 49bfccc8b774461aa705e2e9917530cdc0f96b2c	examples
+	040000 tree c9a19fdb41ed9aa3c88ea062cd36b63ac1a131e9	lib
+	100644 blob f4ba9e0fe4a997aa86c956c7d31c9375a699520a	parsons.css
+	100644 blob 0dbf640b9a8ea3a3058f3a4f5935b25d6ed2f2f7	parsons.js
+	040000 tree 5cbdcbbf7fedddfc18f9a451da5b2178d65c6281	tests
+	040000 tree d40370126d7d0f49510a621055fd616a6081d8c6	ui-extension

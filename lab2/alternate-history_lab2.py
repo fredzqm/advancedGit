@@ -10,10 +10,8 @@ def getOutput(command):
     proc = subprocess.Popen(command, stdout = subprocess.PIPE)
     return [line.decode('utf-8') for line in proc.stdout]
 
-print(args.tree)
-
 com = None
-for tree in reversed(args.tree):
+for tree in args.tree:
     if com == None:
         com = getOutput(['git', 'commit-tree', tree, '-m', 'alternative start'])
     else:
