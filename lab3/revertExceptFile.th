@@ -1,0 +1,10 @@
+OLD_COMMIT = $1
+FILE = $2
+
+git reset
+git add $2
+git commit -m 'tempory commit'
+TMP_COMMIT="$(git rev-parse HEAD)"
+echo "${TMP_COMMIT}"
+git reset $OLD_COMMIT --hard
+git checkout $OLD_COMMIT -- $FILE
