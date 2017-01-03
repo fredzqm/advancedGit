@@ -1,0 +1,5 @@
+echo "I am a file added to git!" > a.txt
+git aa
+git ci -m 'my commit'
+echo "I am a file not added to git!" > b.txt
+echo "another file" > c.txt

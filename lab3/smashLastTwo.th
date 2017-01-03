@@ -1,0 +1,4 @@
+git stash
+git reset --soft HEAD~2
+git commit -m 'SMASHED'
+git stash pop
