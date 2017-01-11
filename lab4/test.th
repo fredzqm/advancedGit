@@ -1,0 +1,6 @@
+git merge --abort
+git checkout 7e648132e0
+git br -D SomeOutput
+sed -i s/a/aa/ parsons.js examples/turtle-test.html
+git commit -am "silly modification"
+../lab4/auto-merge-with-comments.py --use c1ccce1 --commentify deeffdf --branch SomeOutput --prefix "XXXX "
